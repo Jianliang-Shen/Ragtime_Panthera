@@ -7,7 +7,7 @@ This project includes a **Ubuntu 20.04 Virtual Machine Image** and a related **R
 The Baidu Netdisk link provides access to the following files:
 
 - `ROS Installation and VM Usage Guide (PDF)`
-- `Ubuntu_20.04_ROS_VM_Image.vdi` (Virtual machine image file)
+- `Ubuntu_20.04_ROS_VM_Image` (Virtual machine image file)
 
 ## 🔗 Download Link
 
