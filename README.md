@@ -5,7 +5,7 @@ A set of six axis gripper robotic arm based on DM actuator.
 
 This project was collaboratively developed by **wEch1ng (芝士榴莲肥牛)** and myself.  
 
-The initial concept for the Panthera project was proposed by wEch1ng. During its development, I provided **technical guidance**, **environment setup**, **partial sponsorship**, and was heavily involved in **debugging and hardware verification**, contributing to roughly **40% ** of the overall workload.
+The initial concept for the Panthera project was proposed by wEch1ng. During its development, I provided **technical guidance**, **environment setup**, **partial sponsorship**, and was heavily involved in **debugging and hardware verification**, contributing to roughly 'a little bit' of the overall workload.
 
 Both of us built our own arm and worked through some iterations. In fact, the debugging phase was intense—we each sustained minor injuries 🤕 while assembling and tuning the robotic arm, so we sincerely remind everyone: **please prioritize safety** when working with mechanical systems.
 
