@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/changeMode"
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/changeMode.pdb"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/changeMode"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/changeMode.pdb"
   "CMakeFiles/changeMode.dir/src/changeMode.cpp.o"
 )
 

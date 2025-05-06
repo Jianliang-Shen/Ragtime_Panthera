@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/Moveit_test"
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/Moveit_test.pdb"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/Moveit_test"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/Moveit_test.pdb"
   "CMakeFiles/Moveit_test.dir/src/Moveit_test.cpp.o"
 )
 

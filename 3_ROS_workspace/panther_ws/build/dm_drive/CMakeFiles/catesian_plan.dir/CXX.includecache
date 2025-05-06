@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/panther_ws/src/dm_drive/src/catesian_plan.cpp
+/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/src/dm_drive/src/catesian_plan.cpp
 ros/ros.h
 -
 moveit/move_group_interface/move_group_interface.h
@@ -2019,8 +2019,6 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
-boost/bind.hpp
--
 xmlrpcpp/XmlRpcValue.h
 -
 
@@ -2065,7 +2063,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind.hpp
+boost/bind/bind.hpp
 -
 boost/thread/mutex.hpp
 -
@@ -2142,6 +2140,8 @@ ros/datatypes.h
 vector
 -
 map
+-
+memory
 -
 boost/array.hpp
 -

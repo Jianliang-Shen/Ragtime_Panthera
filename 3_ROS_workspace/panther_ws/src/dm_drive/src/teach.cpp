@@ -16,7 +16,7 @@
 
 // 硬件控制参数
 constexpr double RECORD_RATE = 500.0;    // 记录频率
-constexpr double RECORD_DURATION = 20.0; // 记录时长
+constexpr double RECORD_DURATION = 60.0; // 记录时长
 constexpr double RETURN_SPEED = 0.5;     // 返回速度比例
 
 // 单个关节状态数据结构
@@ -199,7 +199,8 @@ void record_phase() {
         dm1.control_mit(M3, 0.0, 0.0, 0.0, 0.0, tau[2]);
         dm2.control_mit(M4, 0.0, 0.0, 0.0, 0.0, tau[3]);
         dm2.control_mit(M5, 0.0, 0.0, 0.0, 0.0, tau[4]);
-        dm2.control_mit(M6, 0.0, 0.0, 0.0, 0.0, tau[5]);
+        //dm2.control_mit(M6, 0.0, 0.0, 0.0, 0.0, tau[5]);
+        dm2.control_mit(M6, 0.0, 0.0, 0.0, 0.0, 0);
         //夹爪
         dm2.control_pos_force(M7,0,0,0);
 
@@ -383,11 +384,11 @@ void replay_phase() {
                 dm2.control_mit(motors[i], 10.0, 1.0, state.position, state.velocity, tau[4]);
             }
             if(i==5){
-                dm2.control_mit(motors[i], 10.0, 1.0, state.position, state.velocity, tau[5]);
+                dm2.control_mit(motors[i], 10.0, 1.0, state.position, state.velocity, tau[5]); // should be fine(tested @KelvinLauMiau)
             }
             if(i==6){
-                //夹紧距离减小0.2保证能夹住东西
-                dm2.control_pos_force(motors[i],state.position-0.2,abs(state.velocity*100),500);
+                //夹紧距离减小0.1保证能夹住东西
+                dm2.control_pos_force(motors[i],state.position-0.1,abs(state.velocity*100),1000);
             }
             
             // if(i==0) dm1.control_pos_vel(

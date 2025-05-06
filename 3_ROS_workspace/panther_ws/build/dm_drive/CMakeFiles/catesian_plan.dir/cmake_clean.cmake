@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/catesian_plan"
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/catesian_plan.pdb"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/catesian_plan"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/catesian_plan.pdb"
   "CMakeFiles/catesian_plan.dir/src/catesian_plan.cpp.o"
 )
 

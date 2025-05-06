@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/panther_ws/install
+prefix=/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/install
 
 Name: panther_moveit_config
 Description: Description of panther_moveit_config

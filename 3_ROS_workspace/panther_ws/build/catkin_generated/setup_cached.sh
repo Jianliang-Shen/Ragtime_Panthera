@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/ubuntu/panther_ws/build'
+export CMAKE_PREFIX_PATH="/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/src:$ROS_PACKAGE_PATH"

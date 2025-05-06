@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/dm_gripper_control"
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/dm_gripper_control.pdb"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/dm_gripper_control"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/dm_gripper_control.pdb"
   "CMakeFiles/dm_gripper_control.dir/src/dm_gripper_control.cpp.o"
 )
 

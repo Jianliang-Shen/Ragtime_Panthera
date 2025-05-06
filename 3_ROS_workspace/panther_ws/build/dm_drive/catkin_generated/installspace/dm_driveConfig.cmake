@@ -67,14 +67,14 @@ set(dm_drive_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(dm_drive_SOURCE_PREFIX /home/ubuntu/panther_ws/src/dm_drive)
-  set(dm_drive_DEVEL_PREFIX /home/ubuntu/panther_ws/devel)
+  set(dm_drive_SOURCE_PREFIX /home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/src/dm_drive)
+  set(dm_drive_DEVEL_PREFIX /home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel)
   set(dm_drive_INSTALL_PREFIX "")
   set(dm_drive_PREFIX ${dm_drive_DEVEL_PREFIX})
 else()
   set(dm_drive_SOURCE_PREFIX "")
   set(dm_drive_DEVEL_PREFIX "")
-  set(dm_drive_INSTALL_PREFIX /home/ubuntu/panther_ws/install)
+  set(dm_drive_INSTALL_PREFIX /home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/install)
   set(dm_drive_PREFIX ${dm_drive_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/panther_ws/install/lib;/home/ubuntu/panther_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

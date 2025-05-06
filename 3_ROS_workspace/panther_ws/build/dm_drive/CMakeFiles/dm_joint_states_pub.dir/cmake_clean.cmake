@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/dm_joint_states_pub"
-  "/home/ubuntu/panther_ws/devel/lib/dm_drive/dm_joint_states_pub.pdb"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/dm_joint_states_pub"
+  "/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel/lib/dm_drive/dm_joint_states_pub.pdb"
   "CMakeFiles/dm_joint_states_pub.dir/src/dm_joint_states_pub.cpp.o"
 )
 
