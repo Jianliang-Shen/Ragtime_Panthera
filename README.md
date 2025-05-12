@@ -17,4 +17,9 @@ If you'd like to show appreciation or offer support, please feel free to contact
 
 ## Tutorials
 
-To be continued...
+Updated Python Tutorial DEMO
+
+Working on Installation Guide (ing)
+
+![image](https://github.com/user-attachments/assets/eede7081-8dca-4d07-9424-a4de84e4dafb)
+
