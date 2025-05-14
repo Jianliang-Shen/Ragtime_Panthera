@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="panther_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 -4.4E-05 0.028999"
+        rpy="0 0 0" />
+      <mass
+        value="0.3" />
+      <inertia
+        ixx="0.000124"
+        ixy="0"
+        ixz="0"
+        iyy="0.000124"
+        iyz="0"
+        izz="0.000143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.00 -0.008491  0.034259"
+        rpy="0 0 0" />
+      <mass
+        value="0.65" />
+      <inertia
+        ixx="0.000541"
+        ixy="-2E-06"
+        ixz="1E-06"
+        iyy="0.000481"
+        iyz="-5E-06"
+        izz="0.000362" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1005"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.124560 0.000000 0.017699"
+        rpy="0 0 0" />
+      <mass
+        value="0.83" />
+      <inertia
+        ixx="0.000462"
+        ixy="0"
+        ixz="-0.000548"
+        iyy="0.00435"
+        iyz="0"
+        izz="0.004315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82745 0.82745 0.81961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.15 0.007521 0.017264"
+        rpy="0 0 0" />
+      <mass
+        value="0.87" />
+      <inertia
+        ixx="0.000541"
+        ixy="-0.000276"
+        ixz="-0.000537"
+        iyy="0.004264"
+        iyz="7.6E-05"
+        izz="0.004338" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82745 0.82745 0.81961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0.18 0 0"
+      rpy="3.1416 0 2.8349" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.08 -0.053910 0.004474"
+        rpy="0 0 0" />
+      <mass
+        value="0.427" />
+      <inertia
+        ixx="0.000559"
+        ixy="-0.000294"
+        ixz="-0.000102"
+        iyy="0.000489"
+        iyz="0.000104"
+        izz="0.000773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82745 0.82745 0.81961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0.18881 0 0"
+      rpy="3.1416 0 -0.30668" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="0.013 0.000000  -0.007913"
+        rpy="0 0 0" />
+      <mass
+        value="0.39" />
+      <inertia
+        ixx="0.000251"
+        ixy="0"
+        ixz="0"
+        iyy="0.000248"
+        iyz="-1.5E-05"
+        izz="0.000172" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0.08 0 0"
+      rpy="-1.5708 1.5708 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.000018 -0.000159 0.09"
+        rpy="0 0 0" />
+      <mass
+        value="0.41" />
+      <inertia
+        ixx="0.002121"
+        ixy="4E-06"
+        ixz="0"
+        iyy="0.002522"
+        iyz="1E-06"
+        izz="0.000475" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82745 0.82745 0.81961 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0 -0.036 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="gripper_centor_link">
+    <inertial>
+      <origin
+        xyz="-0.10705 -0.00028388 -3.5921E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.000" />
+      <inertia
+        ixx="0.00012365"
+        ixy="-5.3605E-07"
+        ixz="-1.3099E-12"
+        iyy="0.00013341"
+        iyz="-1.2272E-16"
+        izz="3.1522E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/gripper_centor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/gripper_centor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_centor_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.148"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link6" />
+    <child
+      link="gripper_centor_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3"
+      velocity="1" />
+  </joint>
+  <link
+    name="gripper_1_link">
+    <inertial>
+      <origin
+        xyz="-0.057427 0.0029609 0.0073892"
+        rpy="0 0 0" />
+      <mass
+        value="0.0000" />
+      <inertia
+        ixx="1.5429E-05"
+        ixy="6.9755E-07"
+        ixz="6.4561E-07"
+        iyy="1.5841E-05"
+        iyz="8.9712E-07"
+        izz="1.0925E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/gripper_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/gripper_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.148"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link6" />
+    <child
+      link="gripper_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.06"
+      effort="0.18"
+      velocity="1" />
+  </joint>
+  <link
+    name="gripper_2_link">
+    <inertial>
+      <origin
+        xyz="-0.057387 -0.0029433 -0.0075697"
+        rpy="0 0 0" />
+      <mass
+        value="0.000" />
+      <inertia
+        ixx="1.5197E-05"
+        ixy="-6.9738E-07"
+        ixz="-6.4563E-07"
+        iyy="1.5609E-05"
+        iyz="8.9915E-07"
+        izz="1.0924E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/gripper_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panther_description/meshes/gripper_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.148"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link6" />
+    <child
+      link="gripper_2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.06"
+      effort="0.18"
+      velocity="1" />
+    <mimic
+      joint="gripper_1_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+</robot>
