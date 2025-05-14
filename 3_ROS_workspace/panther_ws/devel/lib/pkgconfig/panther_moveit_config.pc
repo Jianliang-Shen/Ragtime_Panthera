@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel
-
-Name: panther_moveit_config
-Description: Description of panther_moveit_config
-Version: 0.3.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

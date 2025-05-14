@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/Ragtime_Panthera/3_ROS_workspace/panther_ws/devel
-
-Name: panther_description
-Description: Description of panther_description
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
