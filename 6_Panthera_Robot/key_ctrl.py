@@ -5,24 +5,36 @@ import threading
 import time
 from pynput import keyboard
 
-
+# 读取机器人模型
 model = mujoco.MjModel.from_xml_path("./Panthera_Robot.xml")
 data = mujoco.MjData(model)
 
 q_des = np.copy(data.qpos)
 
-
+# 初始位置拉高，避免初始碰撞
 q_des[1] = np.deg2rad(90)   # joint1
 q_des[2] = np.deg2rad(90)   # joint2
 
-# 整体抬高机器人（假设 z 在 qpos[2]，要确认你的模型自由度）
-# 如果是 floating base 机器人，qpos[2] 通常是 z 方向
-# if model.nq >= 3:  
-#     q_des[2] += 0.1   # 抬高 10cm，避免初始穿透
+# MDH参数: theta0, d, a, alpha
+MDH_params = [
+    [np.pi,         0.105,          0.0,        0.0],       # Joint 1
+    [0.0,           0.0,            0.0,        np.pi/2],   # Joint 2
+    [-2.83491633,   0.0,            0.18,       -np.pi],    # Joint 3
+    [-2.83491266,   -0.0,           0.18880943, np.pi],     # Joint 4
+    [-np.pi/2,      -0.00000016,    -0.08,      np.pi/2],   # Joint 5
+    [0.0,           0.036,          -0.0,       np.pi/2],   # Joint 6
+]
 
-# # 应用
-# data.qpos[:] = q_des
-
+def mdh_transform(theta, d, a, alpha):
+    """生成MDH齐次变换矩阵"""
+    ct, st = np.cos(theta), np.sin(theta)
+    ca, sa = np.cos(alpha), np.sin(alpha)
+    return np.array([
+        [ct, -st, 0, a],
+        [st*ca, ct*ca, -sa, -d*sa],
+        [st*sa, ct*sa, ca, d*ca],
+        [0, 0, 0, 1]
+    ])
 
 # 键盘控制映射
 key_map = {
@@ -90,6 +102,17 @@ with mujoco.viewer.launch_passive(model, data) as viewer:
 
         data.qpos[:len(q_des)] = q_des
         data.qvel[:] = 0
+
+        T = np.eye(4)
+
+        print("Joint origins relative to base_link:")
+        for i, (params, q) in enumerate(zip(MDH_params, data.qpos[:6]), start=1):
+            theta0, d, a, alpha = params
+            theta = theta0 + q   # 加上关节变量
+            A = mdh_transform(theta, d, a, alpha)
+            T = T @ A
+            pos = T[:3, 3]
+            print(f"Joint {i}: x={pos[0]: .6f}, y={pos[1]: .6f}, z={pos[2]: .6f}")
 
         mujoco.mj_step(model, data)
         if moved:
